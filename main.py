@@ -1,5 +1,5 @@
 # This is my first Python assignment
-def main():
+def collect_info():
     print("Hello user, please enter your information")
 
     name = input("Enter your name: ")
@@ -14,18 +14,21 @@ def main():
 
     print(f"Your phone number is {phone}")
 
-    again = input("Is your information correct? Enter yes or no: ")
-
-    if again == "no":
-        print("Please try again")
-
-    elif again == "yes":
-        print("Thank you for your information")
-        exit()
-
-    else:
-        print("You should enter either \"yes\" or \"no\".")
-
-
 if __name__ == "__main__":
-    main()
+    loop_control = True
+    while loop_control == True:
+        collect_info()
+        print("Is your information correct?")
+        response = input("Type yes to exit")
+        if response == 'yes':
+            loop_control = False
+
+
+# if __name__ == "__main__":
+#     loop_control_variable = True
+#     while loop_control_variable == True:
+#         print("I am looping")
+#         response = input("Type 1 to exit this loop")
+#         if response == '1':
+#             loop_control_variable = False
+#     # main()
